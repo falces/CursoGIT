@@ -10,6 +10,10 @@ Stagin area
 
 # Instalación
 
+## Windows
+
+Descargar el instalador de la página oficial: https://git-scm.com/. Es una instalación sencilla "siguiente...", pero hay que asegurarse de que en las opciones de instalación se instala Git Bash (la terminal de Git).
+
 # Comandos
 
 Inicializar un repositorio en un directorio:
@@ -79,14 +83,15 @@ Date:   Sat Nov 20 22:39:54 2021 +0100
     ADD: Readme
 ```
 
-Histórico de acciones:
+Histórico de acciones, de más a menos reciente:
 
 ```bash
 $ git reflog
 ```
 
 ```
-a276a63 (HEAD -> master, origin/master) HEAD@{0}: commit (initial): ADD: Readme
+7bc16b8 (HEAD -> master, origin/master) HEAD@{0}: commit: WIP: Progress
+a276a63 HEAD@{1}: commit (initial): ADD: Readme
 ```
 
 Añadir un archivo al staging area:
@@ -113,7 +118,24 @@ $ git commit -m "ADD: New files"
 
 Enviar cambios a un repositorio remoto:
 
-```bash:
+```bash
 $ git push
+```
+
+```
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.03 KiB | 16.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:falces/CursoGIT.git
+   a276a63..7bc16b8  master -> master
+```
+
+Traer cambios de un repositorio remoto:
+
+```bash
+$ git pull
 ```
 
